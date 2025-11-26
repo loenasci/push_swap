@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/24 14:50:20 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/26 18:43:49 by loda-sil         ###   ########.fr       */
+/*   Created: 2025/11/24 18:06:58 by loda-sil          #+#    #+#             */
+/*   Updated: 2025/11/26 18:42:20 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-int	main(int argc, char *argv[])
+int	skip_whitespace(const char *str)
 {
-	t_stack *stack;
-	int *numbers;
-	int numbers_count;
+	int i;
 
-	if (argc < 2)
-		return (0);
-
-	free_stack(stack);
-	stack = NULL;
-	return (0);
+	i = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	return (i);
 }
 
+int	ft_error(void)
+{
+	ft_putstr_fd("Error\n", 2);
+	return (1);
+}

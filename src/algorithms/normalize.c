@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   normalize.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/24 14:50:20 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/26 18:43:49 by loda-sil         ###   ########.fr       */
+/*   Created: 2025/11/26 18:45:43 by loda-sil          #+#    #+#             */
+/*   Updated: 2025/11/26 19:48:32 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-int	main(int argc, char *argv[])
+int *normalize_stack(t_stack *stack)
 {
-	t_stack *stack;
-	int *numbers;
-	int numbers_count;
+	
 
-	if (argc < 2)
-		return (0);
-
-	free_stack(stack);
-	stack = NULL;
-	return (0);
+	
 }
-

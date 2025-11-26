@@ -2,7 +2,16 @@ NAME =  push_swap
 
 HEADERS = include/push_swap.h
 
-SRCS = src/main.c
+SRCS = src/main.c \
+		src/init_stack.c \
+		src/parsing.c \
+		src/validation.c \
+		src/utils/free.c \
+		src/utils/utils.c \
+		src/operations/swap.c \
+		src/operations/push.c \
+		src/operations/rotate.c \
+		src/operations/reverse_rotate.c
 OBJS = $(SRCS:src/%.c=obj/%.o)
 
 CC = cc
