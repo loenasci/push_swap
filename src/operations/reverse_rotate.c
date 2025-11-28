@@ -6,13 +6,13 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 17:46:34 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/27 10:06:51 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/11/28 16:39:24 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-static reverse_rotate_stack(int *stack, int size)
+static void reverse_rotate_stack(int *stack, int size)
 {
 	int tmp;
 	int i;

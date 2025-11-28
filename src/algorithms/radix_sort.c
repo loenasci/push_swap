@@ -6,7 +6,7 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:18:16 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/27 15:57:41 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/11/28 10:39:01 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,30 @@ int get_max_bits(t_stack *stack)
 	return (bits);
 }
 
+void radix_sort(t_stack *stack)
+{
+	int max_bits;
+	int bit;
+	int size;
+	int i;
+
+	max_bits = get_max_bits(stack);
+	bit = 0;
+	
+	while (bit < max_bits)
+	{
+		size = stack->size_a;
+		i = 0;
+		while (i < size)
+		{
+			if ((stack->a[0] >> bit) & 1)
+				ra(stack);
+			else
+				pb(stack);
+			i++;
+		}
+		while (stack->size_b > 0)
+			pa(stack);
+		bit++;
+	}
+}

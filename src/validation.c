@@ -6,7 +6,7 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 17:42:27 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/26 18:44:23 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/11/28 16:37:05 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,12 @@ int is_sorted(t_stack *stack)
 {
 	int i;
 
-	if (!stack || stack->b)
+	if (!stack || stack->size_b > 0)
 		return (0);
 	i = 0;
-	while (i < stack->size_a)
+	while (i < stack->size_a - 1)
 	{
-		if (stack->a[i] < stack->a[i + 1])
+		if (stack->a[i] > stack->a[i + 1])
 			return (0);
 		i++;
 	}

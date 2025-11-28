@@ -6,7 +6,7 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 14:05:06 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/27 15:52:48 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/11/28 16:33:49 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,12 @@ int		*parse_args(int argc, char **argv, int *numbers_count);
 int		atoi_validate(const char *str, int *result);
 int		has_duplicates(int *str, int size);
 int		is_sorted(t_stack *stack);
+
+// Algorithm
+void normalize_stack(t_stack *stack);
+void radix_sort(t_stack *stack);
+void sort_two(t_stack *stack);
+void sort_three(t_stack *stack);
 
 // Operations
 void	sa(t_stack *stack);

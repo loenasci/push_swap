@@ -11,20 +11,23 @@ SRCS = src/main.c \
 		src/operations/swap.c \
 		src/operations/push.c \
 		src/operations/rotate.c \
-		src/operations/reverse_rotate.c
+		src/operations/reverse_rotate.c \
+		src/algorithms/normalize.c \
+		src/algorithms/radix_sort.c \
+		src/algorithms/simple_sort.c
 OBJS = $(SRCS:src/%.c=obj/%.o)
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra -I./include
 
-LIBFT = lib/libft/libft.a
-LIBFTPRINTF = lib/ft_printf/libftprintf.a
+LIBFT = libs/libft/libft.a
+LIBFTPRINTF = libs/ft_printf/libftprintf.a
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	make -C lib/libft
-	make -C lib/ft_printf
+	make -C libs/libft
+	make -C libs/ft_printf
 	$(CC) $(OBJS) $(LIBFT) $(LIBFTPRINTF) -o $(NAME)
 
 obj/%.o: src/%.c $(HEADERS)
@@ -33,13 +36,13 @@ obj/%.o: src/%.c $(HEADERS)
 
 clean:
 	rm -rf obj
-	make clean -C lib/libft
-	make clean -C lib/ft_printf
+	make clean -C libs/libft
+	make clean -C libs/ft_printf
 
 fclean: clean
 	rm -f $(NAME)
-	make fclean -C lib/libft
-	make fclean -C lib/ft_printf
+	make fclean -C libs/libft
+	make fclean -C libs/ft_printf
 
 re: fclean all
 
