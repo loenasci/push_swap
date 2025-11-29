@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: loena <loena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 17:46:34 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/28 16:39:24 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/11/29 19:29:52 by loena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ void rrb(t_stack *stack)
 void rrr(t_stack *stack)
 {
 	reverse_rotate_stack(stack->a, stack->size_a);
-	reverse_rotate_stack(stack->a, stack->size_b);
+	reverse_rotate_stack(stack->b, stack->size_b);
 	ft_printf("rrr\n");
 }

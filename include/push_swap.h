@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: loena <loena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 14:05:06 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/28 16:33:49 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/11/29 19:22:25 by loena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ typedef struct	s_stack
 	int total;
 }	t_stack;
 
+
+// Push Swap
+int push_swap(int *numbers, int numbers_count);
+
 // Initialization
 t_stack	*init_stack(int *numbers, int numbers_count);
 
@@ -41,8 +45,7 @@ int		is_sorted(t_stack *stack);
 // Algorithm
 void normalize_stack(t_stack *stack);
 void radix_sort(t_stack *stack);
-void sort_two(t_stack *stack);
-void sort_three(t_stack *stack);
+void simple_sort(t_stack *stack);
 
 // Operations
 void	sa(t_stack *stack);
@@ -64,5 +67,7 @@ void	free_stack(t_stack *stack);
 // Utils
 int		skip_whitespace(const char *str);
 int		ft_error(void);
+int		find_max_index(t_stack *stack);
+int find_min_index(t_stack *stack);
 
 #endif

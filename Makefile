@@ -3,6 +3,7 @@ NAME =  push_swap
 HEADERS = include/push_swap.h
 
 SRCS = src/main.c \
+		src/push_swap.c \
 		src/init_stack.c \
 		src/parsing.c \
 		src/validation.c \
