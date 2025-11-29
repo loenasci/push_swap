@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: loena <loena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 20:56:15 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/25 16:32:15 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/11/29 19:39:10 by loena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 static int *convert_to_int(char **args, int tokens_count, int *numbers_count)
 {

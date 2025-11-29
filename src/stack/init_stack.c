@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   init_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
+/*   By: loena <loena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 13:34:34 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/26 14:04:27 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/11/29 19:39:07 by loena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 static t_stack *alloc_stack(int numbers_count)
 {
