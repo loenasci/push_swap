@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loena <loena@student.42.fr>                +#+  +:+       +#+        */
+/*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 20:56:15 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/29 19:39:10 by loena            ###   ########.fr       */
+/*   Updated: 2025/12/01 15:50:31 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include <push_swap.h>
 
-static int *convert_to_int(char **args, int tokens_count, int *numbers_count)
+static int	*convert_to_int(char **args, int tokens_count, int *numbers_count)
 {
-	int *numbers;
-	int i;
+	int	*numbers;
+	int	i;
 
 	numbers = malloc(sizeof(int) * tokens_count);
 	if (!numbers)
@@ -39,11 +39,11 @@ static int *convert_to_int(char **args, int tokens_count, int *numbers_count)
 	return (numbers);
 }
 
-int *parse_args(int argc, char **argv, int *numbers_count)
+int	*parse_args(int argc, char **argv, int *numbers_count)
 {
-	int *numbers;
-	char **tokens;
-	int tokens_count;
+	int		*numbers;
+	char	**tokens;
+	int		tokens_count;
 
 	if (argc < 2)
 		return (NULL);

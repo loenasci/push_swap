@@ -6,16 +6,16 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 17:46:37 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/26 18:10:39 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:50:31 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include <push_swap.h>
 
-static void rotate_stack(int *stack, int size)
+static void	rotate_stack(int *stack, int size)
 {
-	int tmp;
-	int i;
+	int	tmp;
+	int	i;
 
 	if (size < 2)
 		return ;
@@ -29,19 +29,19 @@ static void rotate_stack(int *stack, int size)
 	stack[i] = tmp;
 }
 
-void ra(t_stack *stack)
+void	ra(t_stack *stack)
 {
 	rotate_stack(stack->a, stack->size_a);
 	ft_printf("ra\n");
 }
 
-void rb(t_stack *stack)
+void	rb(t_stack *stack)
 {
 	rotate_stack(stack->b, stack->size_b);
 	ft_printf("rb\n");
 }
 
-void rr(t_stack *stack)
+void	rr(t_stack *stack)
 {
 	rotate_stack(stack->a, stack->size_a);
 	rotate_stack(stack->b, stack->size_b);

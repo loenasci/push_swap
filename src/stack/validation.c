@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   validation.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loena <loena@student.42.fr>                +#+  +:+       +#+        */
+/*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 17:42:27 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/29 19:38:50 by loena            ###   ########.fr       */
+/*   Updated: 2025/12/01 15:50:31 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include <push_swap.h>
 
-int atoi_validate(const char *str, int *result)
+int	atoi_validate(const char *str, int *result)
 {
-	long int nbr;
-	int sign;
-	size_t i;
+	long int	nbr;
+	size_t		i;
+	int			sign;
 
 	i = skip_whitespace(str);
 	sign = 1;
@@ -24,10 +24,8 @@ int atoi_validate(const char *str, int *result)
 	if (!str || !*str)
 		return (0);
 	if (str[i] == '-' || str[i] == '+')
-	{
 		if (str[i++] == '-')
 			sign = -1;
-	}
 	if (!ft_isdigit(str[i]))
 		return (0);
 	while (ft_isdigit(str[i]))
@@ -41,10 +39,10 @@ int atoi_validate(const char *str, int *result)
 	return (1);
 }
 
-int has_duplicates(int *str, int numbers_count)
+int	has_duplicates(int *str, int numbers_count)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i < numbers_count)
@@ -61,9 +59,9 @@ int has_duplicates(int *str, int numbers_count)
 	return (0);
 }
 
-int is_sorted(t_stack *stack)
+int	is_sorted(t_stack *stack)
 {
-	int i;
+	int	i;
 
 	if (!stack || stack->size_b > 0)
 		return (0);

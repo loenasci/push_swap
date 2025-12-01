@@ -4,9 +4,9 @@ HEADERS = include/push_swap.h
 
 SRCS = src/main.c \
 		src/push_swap.c \
-		src/init_stack.c \
-		src/parsing.c \
-		src/validation.c \
+		src/stack/init_stack.c \
+		src/stack/parsing.c \
+		src/stack/validation.c \
 		src/utils/free.c \
 		src/utils/utils.c \
 		src/operations/swap.c \
@@ -19,7 +19,7 @@ SRCS = src/main.c \
 OBJS = $(SRCS:src/%.c=obj/%.o)
 
 CC = cc
-CFLAGS = -Wall -Werror -Wextra -I./include
+CFLAGS = -Wall -Werror -Wextra -g -I./include -I./libs/ft_printf -I./libs/libft
 
 LIBFT = libs/libft/libft.a
 LIBFTPRINTF = libs/ft_printf/libftprintf.a

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loena <loena@student.42.fr>                +#+  +:+       +#+        */
+/*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 18:06:58 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/29 18:46:08 by loena            ###   ########.fr       */
+/*   Updated: 2025/12/01 15:50:31 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include <push_swap.h>
 
 int	skip_whitespace(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
@@ -30,8 +30,8 @@ int	ft_error(void)
 
 int	find_max_index(t_stack *stack)
 {
-	int i;
-	int max_i;
+	int	i;
+	int	max_i;
 
 	i = 0;
 	max_i = 0;
@@ -44,10 +44,10 @@ int	find_max_index(t_stack *stack)
 	return (max_i);
 }
 
-int find_min_index(t_stack *stack)
+int	find_min_index(t_stack *stack)
 {
-	int i;
-	int min_i;
+	int	i;
+	int	min_i;
 
 	i = 0;
 	min_i = 0;

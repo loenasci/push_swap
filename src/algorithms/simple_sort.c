@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   simple_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loena <loena@student.42.fr>                +#+  +:+       +#+        */
+/*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 10:44:11 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/29 19:30:58 by loena            ###   ########.fr       */
+/*   Updated: 2025/12/01 15:50:31 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include <push_swap.h>
 
-static void sort_two(t_stack *stack)
+static void	sort_two(t_stack *stack)
 {
-	if(stack->a[0] > stack->a[1])
+	if (stack->a[0] > stack->a[1])
 		sa(stack);
 }
 
-static void sort_three(t_stack *stack)
+static void	sort_three(t_stack *stack)
 {
-	int max_index;
+	int	max_index;
 
 	max_index = find_max_index(stack);
 	if (max_index == 0)
@@ -31,9 +31,9 @@ static void sort_three(t_stack *stack)
 		sa(stack);
 }
 
-static void sort_four(t_stack *stack)
+static void	sort_four(t_stack *stack)
 {
-	int min_index;
+	int	min_index;
 
 	min_index = find_min_index(stack);
 	if (min_index == 1)
@@ -50,9 +50,9 @@ static void sort_four(t_stack *stack)
 	pa(stack);
 }
 
-static void sort_five(t_stack *stack)
+static void	sort_five(t_stack *stack)
 {
-	int min_index;
+	int	min_index;
 
 	min_index = find_min_index(stack);
 	if (min_index <= 2)

@@ -6,17 +6,17 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 18:45:43 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/27 15:54:42 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:49:48 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include <push_swap.h>
 
-static int *sort_array(int *sorted, int size)
+static int	*sort_array(int *sorted, int size)
 {
-	int tmp;
-	int i;
-	int j;
+	int	tmp;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i < size - 1)
@@ -37,10 +37,9 @@ static int *sort_array(int *sorted, int size)
 	return (sorted);
 }
 
-
-static void copy_array(int *stack, int *sorted, int size)
+static void	copy_array(int *stack, int *sorted, int size)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < size)
@@ -50,10 +49,10 @@ static void copy_array(int *stack, int *sorted, int size)
 	}
 }
 
-static void index_values(t_stack *stack, int *sorted)
+static void	index_values(t_stack *stack, int *sorted)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (i < stack->size_a)
@@ -61,7 +60,7 @@ static void index_values(t_stack *stack, int *sorted)
 		j = 0;
 		while (j < stack->size_a)
 		{
-			if(stack->a[i] == sorted[j])
+			if (stack->a[i] == sorted[j])
 			{
 				stack->a[i] = j;
 				break ;
@@ -72,9 +71,9 @@ static void index_values(t_stack *stack, int *sorted)
 	}
 }
 
-void normalize_stack(t_stack *stack)
+void	normalize_stack(t_stack *stack)
 {
-	int *sorted;
+	int	*sorted;
 
 	sorted = malloc(sizeof(int) * stack->size_a);
 	copy_array(stack->a, sorted, stack->size_a);

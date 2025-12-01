@@ -6,16 +6,16 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:18:16 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/28 10:39:01 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:50:31 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include <push_swap.h>
 
-int get_max_bits(t_stack *stack)
+int	get_max_bits(t_stack *stack)
 {
-	int max_num;
-	int bits;
+	int	max_num;
+	int	bits;
 
 	max_num = stack->size_a - 1;
 	bits = 0;
@@ -24,16 +24,15 @@ int get_max_bits(t_stack *stack)
 	return (bits);
 }
 
-void radix_sort(t_stack *stack)
+void	radix_sort(t_stack *stack)
 {
-	int max_bits;
-	int bit;
-	int size;
-	int i;
+	int	max_bits;
+	int	bit;
+	int	size;
+	int	i;
 
 	max_bits = get_max_bits(stack);
 	bit = 0;
-	
 	while (bit < max_bits)
 	{
 		size = stack->size_a;

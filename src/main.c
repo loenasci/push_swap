@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loena <loena@student.42.fr>                +#+  +:+       +#+        */
+/*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 14:50:20 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/29 19:23:38 by loena            ###   ########.fr       */
+/*   Updated: 2025/12/01 15:51:07 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include <push_swap.h>
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-	int *numbers;
-	int numbers_count;
+	int	*numbers;
+	int	numbers_count;
 
 	if (argc < 2)
 		return (0);
@@ -29,4 +29,3 @@ int main(int argc, char *argv[])
 	}
 	return (push_swap(numbers, numbers_count));
 }
-

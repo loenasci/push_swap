@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   init_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loena <loena@student.42.fr>                +#+  +:+       +#+        */
+/*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 13:34:34 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/29 19:39:07 by loena            ###   ########.fr       */
+/*   Updated: 2025/12/01 15:50:31 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include <push_swap.h>
 
-static t_stack *alloc_stack(int numbers_count)
+static t_stack	*alloc_stack(int numbers_count)
 {
-	t_stack *stack;
-	
+	t_stack	*stack;
+
 	stack = malloc(sizeof(t_stack));
 	if (!stack)
 		return (NULL);
@@ -35,13 +35,13 @@ static t_stack *alloc_stack(int numbers_count)
 	return (stack);
 }
 
-t_stack *init_stack(int *numbers, int numbers_count)
+t_stack	*init_stack(int *numbers, int numbers_count)
 {
-	t_stack *stack;
-	int i;
+	t_stack	*stack;
+	int		i;
 
 	stack = alloc_stack(numbers_count);
-	if(!stack)
+	if (!stack)
 		return (NULL);
 	i = 0;
 	while (i < numbers_count)

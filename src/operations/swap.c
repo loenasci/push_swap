@@ -6,15 +6,15 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 17:48:38 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/11/26 17:58:29 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/12/01 15:50:31 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include <push_swap.h>
 
-void sa(t_stack *stack) 
+void	sa(t_stack *stack)
 {
-	int tmp;
+	int	tmp;
 
 	if (stack->size_a < 2)
 		return ;
@@ -24,10 +24,9 @@ void sa(t_stack *stack)
 	ft_printf("sa\n");
 }
 
-
-void sb(t_stack *stack) 
+void	sb(t_stack *stack)
 {
-	int tmp;
+	int	tmp;
 
 	if (stack->size_b < 2)
 		return ;
@@ -37,9 +36,9 @@ void sb(t_stack *stack)
 	ft_printf("sb\n");
 }
 
-void ss(t_stack *stack)
+void	ss(t_stack *stack)
 {
-	int tmp;
+	int	tmp;
 
 	if (stack->size_a >= 2)
 	{
@@ -47,7 +46,6 @@ void ss(t_stack *stack)
 		stack->a[0] = stack->a[1];
 		stack->a[1] = tmp;
 	}
-	
 	if (stack->size_b >= 2)
 	{
 		tmp = stack->b[0];

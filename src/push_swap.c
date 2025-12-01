@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loena <loena@student.42.fr>                +#+  +:+       +#+        */
+/*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 19:18:51 by loena             #+#    #+#             */
-/*   Updated: 2025/11/29 19:34:02 by loena            ###   ########.fr       */
+/*   Updated: 2025/12/01 15:51:07 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include <push_swap.h>
 
-int push_swap(int *numbers, int numbers_count)
+int	push_swap(int *numbers, int numbers_count)
 {
-	t_stack *stack;
+	t_stack	*stack;
 
 	stack = init_stack(numbers, numbers_count);
-	if(!stack)
+	if (!stack)
 	{
 		free(numbers);
 		return (ft_error());
