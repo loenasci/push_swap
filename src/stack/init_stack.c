@@ -6,7 +6,7 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 13:34:34 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/12/01 15:50:31 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/12/02 12:21:55 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,5 @@ t_stack	*init_stack(int *numbers, int numbers_count)
 	}
 	stack->size_a = numbers_count;
 	stack->size_b = 0;
-	stack->total = numbers_count;
 	return (stack);
 }

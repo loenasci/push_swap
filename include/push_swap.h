@@ -6,7 +6,7 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 14:05:06 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/12/01 16:14:46 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/12/02 12:21:39 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ typedef struct s_stack
 	int	*b;
 	int	size_a;
 	int	size_b;
-	int	total;
 }	t_stack;
 
 // Push Swap
