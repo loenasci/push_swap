@@ -6,7 +6,7 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 14:50:20 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/12/01 15:51:07 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/12/08 15:49:32 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,5 @@ int	main(int argc, char *argv[])
 	numbers = parse_args(argc, argv, &numbers_count);
 	if (!numbers)
 		return (ft_error());
-	if (has_duplicates(numbers, numbers_count))
-	{
-		free(numbers);
-		return (ft_error());
-	}
 	return (push_swap(numbers, numbers_count));
 }

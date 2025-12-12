@@ -6,7 +6,7 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 20:56:15 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/12/01 15:50:31 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/12/08 18:27:20 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,11 @@ int	*parse_args(int argc, char **argv, int *numbers_count)
 		tokens_count = 0;
 		while (tokens[tokens_count])
 			tokens_count++;
+		if (tokens_count == 0)
+		{
+			free_tokens(tokens);
+			return (NULL);
+		}
 		numbers = convert_to_int(tokens, tokens_count, numbers_count);
 		free_tokens(tokens);
 	}

@@ -6,7 +6,7 @@
 /*   By: loda-sil <loda-sil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:18:16 by loda-sil          #+#    #+#             */
-/*   Updated: 2025/12/01 15:50:31 by loda-sil         ###   ########.fr       */
+/*   Updated: 2025/12/11 21:15:54 by loda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,15 @@ void	radix_sort(t_stack *stack)
 {
 	int	max_bits;
 	int	bit;
-	int	size;
 	int	i;
+	int size;
 
 	max_bits = get_max_bits(stack);
 	bit = 0;
 	while (bit < max_bits)
 	{
-		size = stack->size_a;
 		i = 0;
+		size = stack->size_a;
 		while (i < size)
 		{
 			if ((stack->a[0] >> bit) & 1)

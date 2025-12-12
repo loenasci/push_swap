@@ -27,23 +27,24 @@ LIBFTPRINTF = libs/ft_printf/libftprintf.a
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	make -C libs/libft
-	make -C libs/ft_printf
-	$(CC) $(OBJS) $(LIBFT) $(LIBFTPRINTF) -o $(NAME)
+	@make -C libs/libft --no-print-directory
+	@make -C libs/ft_printf --no-print-directory
+	@$(CC) $(OBJS) $(LIBFT) $(LIBFTPRINTF) -o $(NAME)
+	@echo "$(NAME) compiled successfully."
 
 obj/%.o: src/%.c $(HEADERS)
-	mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@mkdir -p $(dir $@)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf obj
-	make clean -C libs/libft
-	make clean -C libs/ft_printf
+	@rm -rf obj
+	@make clean -C libs/libft --no-print-directory
+	@make clean -C libs/ft_printf --no-print-directory
 
 fclean: clean
-	rm -f $(NAME)
-	make fclean -C libs/libft
-	make fclean -C libs/ft_printf
+	@rm -f $(NAME)
+	@make fclean -C libs/libft --no-print-directory
+	@make fclean -C libs/ft_printf --no-print-directory
 
 re: fclean all
 
